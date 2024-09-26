@@ -1,4 +1,57 @@
-      <v-container fluid>
+<script setup lang="ts">
+import { ref, shallowRef } from 'vue';
+
+import BaseBreadcrumb from '@/components/shared/BaseBreadcrumb.vue';
+import UiParentCard from '@/components/shared/UiParentCard.vue';
+
+const page = ref({ title: 'Percobaan' });
+const breadcrumbs = shallowRef([
+  {
+    title: 'Others',
+    disabled: false,
+    href: '#'
+  },
+  {
+    title: 'Sample Page',
+    disabled: true,
+    href: '#'
+  }
+]);
+
+export default {
+  data() {
+    return {
+      books: [], // Populate this with the list of books from your data
+      chapters: [], // Populate this with chapters based on the selected book
+      verses: [], // This will hold the verses for the selected chapter
+      selectedBook: null,
+      selectedChapter: null,
+    };
+  },
+  methods: {
+    fetchChapters() {
+      // Fetch chapters based on selected book
+      // Example: this.chapters = fetchChaptersFromAPI(this.selectedBook);
+    },
+    fetchVerses() {
+      // Fetch verses based on selected chapter
+      // Example: this.verses = fetchVersesFromAPI(this.selectedBook, this.selectedChapter);
+    },
+    updateAnnotation(verse) {
+      // Update the annotation for the verse
+      // Example: saveAnnotationToAPI(verse.number, verse.annotation);
+    },
+  },
+  mounted() {
+    // Fetch books data when the component is mounted
+    // Example: this.books = fetchBooksFromAPI();
+  },
+};
+
+</script>
+
+<template>
+  <BaseBreadcrumb :title="page.title" :breadcrumbs="breadcrumbs"></BaseBreadcrumb>
         <v-row>
           <v-col cols="12">
             <v-select
@@ -71,53 +124,5 @@
           </v-col>
         </v-row>
       </v-container>
+</template>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.6.12/dist/vuetify.js"></script>
-  <script>
-    new Vue({
-      el: '#app',
-      vuetify: new Vuetify(),
-      data: {
-        books: ['Genesis', 'Exodus', 'Leviticus'], // Add more books
-        selectedBook: null,
-        chapters: [], // Will populate based on selected book
-        selectedChapter: null,
-        verses: [], // Will populate based on selected chapter
-        translations: [], // Will populate with translations for the selected chapter
-        annotations: {},
-        selectedVersion: {}
-      },
-      methods: {
-        fetchChapters() {
-          // Fetch chapters based on selectedBook
-          // For now, use hardcoded chapters as an example
-          this.chapters = ['1', '2', '3']; // Update with actual chapter fetching
-        },
-        fetchVerses() {
-          // Fetch verses based on selectedChapter
-          // For now, use hardcoded verses as an example
-          this.verses = [
-            { id: 1, originalText: 'In the beginning...', annotations: 'Note about this verse.' },
-            { id: 2, originalText: 'And the earth was without form...', annotations: 'Another note.' }
-          ];
-          this.translations = [
-            { id: 1, verseId: 1, text: 'In the beginning, God created...', version: 1, translator: 'John Doe', versions: [1, 2] },
-            { id: 2, verseId: 2, text: 'And the earth was formless...', version: 1, translator: 'Jane Smith', versions: [1] }
-          ];
-        },
-        toggleAnnotations(verseId) {
-          // Toggle annotation visibility
-          this.$set(this.annotations, verseId, !this.annotations[verseId]);
-        },
-        editTranslation(id) {
-          // Edit translation logic here
-          alert(`Editing translation ${id}`);
-        },
-        addNewTranslation(verseId) {
-          // Logic to add a new translation for the verse
-          alert(`Adding new translation for verse ${verseId}`);
-        }
-      }
-    });
-  </script>
