@@ -35,7 +35,7 @@ const breadcrumbs = shallowRef([
     function updateAnnotation(verse) {
       // Update the annotation for the verse
       // Example: saveAnnotationToAPI(verse.number, verse.annotation);
-    },
+    }
 
 </script>
 
