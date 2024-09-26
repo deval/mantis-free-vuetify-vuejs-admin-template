@@ -24,6 +24,9 @@ const breadcrumbs = shallowRef([
        { id: 'asd', originalText: 'asd', annotations: 'asd'  },
        { id: 'asd2', originalText: 'asd2', annotations: 'asd2'  }
      ]); // This will hold the verses for the selected chapter
+     const translations= shallowRef([
+        { id: 'asd', verseId: 'asd', text: 'asd', version: 'asd', translator: 'asd' },
+         ]);
      const annotations=ref([]);
      const selectedBook= ref(null);
      const selectedChapter= ref(null);
