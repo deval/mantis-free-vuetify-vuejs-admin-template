@@ -48,7 +48,7 @@ const breadcrumbs = shallowRef([
       
     }
 function editTranslation(id: string){}
-function addNewTranslation(id: string){}
+function addNewTranslation(id: number){}
     
 
 </script>
