@@ -18,35 +18,24 @@ const breadcrumbs = shallowRef([
   }
 ]);
 
-export default {
-  data() {
-    return {
-      books: [], // Populate this with the list of books from your data
-      chapters: [], // Populate this with chapters based on the selected book
-      verses: [], // This will hold the verses for the selected chapter
-      selectedBook: null,
-      selectedChapter: null,
-    };
-  },
-  methods: {
+     var books: []; // Populate this with the list of books from your data
+     var chapters: []; // Populate this with chapters based on the selected book
+     var verses: []; // This will hold the verses for the selected chapter
+     var selectedBook: null;
+     var selectedChapter: null;
+
     fetchChapters() {
       // Fetch chapters based on selected book
       // Example: this.chapters = fetchChaptersFromAPI(this.selectedBook);
-    },
+    }
     fetchVerses() {
       // Fetch verses based on selected chapter
       // Example: this.verses = fetchVersesFromAPI(this.selectedBook, this.selectedChapter);
-    },
+    }
     updateAnnotation(verse) {
       // Update the annotation for the verse
       // Example: saveAnnotationToAPI(verse.number, verse.annotation);
     },
-  },
-  mounted() {
-    // Fetch books data when the component is mounted
-    // Example: this.books = fetchBooksFromAPI();
-  },
-};
 
 </script>
 
