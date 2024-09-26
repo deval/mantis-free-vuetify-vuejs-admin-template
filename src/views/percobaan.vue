@@ -23,7 +23,7 @@ const breadcrumbs = shallowRef([
      const verses= ref([]); // This will hold the verses for the selected chapter
      const selectedBook= ref(null);
      const selectedChapter= ref(null);
-     const verse= ref({ id: null, originalText: null, annotations: null  });
+     const verse= ref({ id: 'asd', originalText: 'asd', annotations: 'asd'  });
 
     function fetchChapters() {
       // Fetch chapters based on selected book
