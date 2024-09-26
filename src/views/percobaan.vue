@@ -18,11 +18,11 @@ const breadcrumbs = shallowRef([
   }
 ]);
 
-     var books: []; // Populate this with the list of books from your data
-     var chapters: []; // Populate this with chapters based on the selected book
-     var verses: []; // This will hold the verses for the selected chapter
-     var selectedBook: null;
-     var selectedChapter: null;
+     const books = ref([]); // Populate this with the list of books from your data
+     const chapters= ref([]); // Populate this with chapters based on the selected book
+     const verses= ref([]); // This will hold the verses for the selected chapter
+     const selectedBook= ref(null);
+     const selectedChapter= ref(null);
 
     function fetchChapters() {
       // Fetch chapters based on selected book
