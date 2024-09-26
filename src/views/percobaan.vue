@@ -29,8 +29,8 @@ const breadcrumbs = shallowRef([
          ]);
      var annotations:string;
      var selectedVersion: string;
-     const selectedBook= ref(null);
-     const selectedChapter= ref(null);
+     var selectedBook= ref(null);
+     var selectedChapter= ref(null);
 
     function fetchChapters() {
       // Fetch chapters based on selected book
