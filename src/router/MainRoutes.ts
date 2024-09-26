@@ -12,6 +12,11 @@ const MainRoutes = {
       component: () => import('@/views/dashboard/DefaultDashboard.vue')
     },
     {
+      name: 'Percobaan',
+      path: '/',
+      component: () => import('@/views/percobaan.vue')
+    },
+    {
       name: 'Dashboard',
       path: '/dashboard',
       component: () => import('@/views/dashboard/DefaultDashboard.vue')
