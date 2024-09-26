@@ -23,6 +23,7 @@ const breadcrumbs = shallowRef([
      const verses= ref([]); // This will hold the verses for the selected chapter
      const selectedBook= ref(null);
      const selectedChapter= ref(null);
+     const verse= page = ref({ id: null, originalText: null, annotations: null  });
 
     function fetchChapters() {
       // Fetch chapters based on selected book
@@ -32,9 +33,12 @@ const breadcrumbs = shallowRef([
       // Fetch verses based on selected chapter
       // Example: this.verses = fetchVersesFromAPI(this.selectedBook, this.selectedChapter);
     }
-    function updateAnnotation(verse) {
+    function updateAnnotation(verse: any) {
       // Update the annotation for the verse
       // Example: saveAnnotationToAPI(verse.number, verse.annotation);
+    }
+    function toggleAnnotations(verse: any){
+      
     }
 
 </script>
