@@ -47,8 +47,8 @@ const breadcrumbs = shallowRef([
     function toggleAnnotations(verse: any){
       
     }
-function editTranslation(id: any){}
-function addNewTranslation(id: any){}
+function editTranslation(id: string){}
+function addNewTranslation(id: string){}
     
 
 </script>
