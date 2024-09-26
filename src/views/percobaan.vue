@@ -24,15 +24,15 @@ const breadcrumbs = shallowRef([
      var selectedBook: null;
      var selectedChapter: null;
 
-    fetchChapters() {
+    function fetchChapters() {
       // Fetch chapters based on selected book
       // Example: this.chapters = fetchChaptersFromAPI(this.selectedBook);
     }
-    fetchVerses() {
+    function fetchVerses() {
       // Fetch verses based on selected chapter
       // Example: this.verses = fetchVersesFromAPI(this.selectedBook, this.selectedChapter);
     }
-    updateAnnotation(verse) {
+    function updateAnnotation(verse) {
       // Update the annotation for the verse
       // Example: saveAnnotationToAPI(verse.number, verse.annotation);
     },
