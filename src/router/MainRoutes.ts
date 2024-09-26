@@ -13,7 +13,7 @@ const MainRoutes = {
     },
     {
       name: 'Percobaan',
-      path: '/',
+      path: '/percobaan',
       component: () => import('@/views/percobaan.vue')
     },
     {
