@@ -34,6 +34,11 @@ const sidebarItem: menu[] = [
     icon: DashboardOutlined,
     to: '/dashboard'
   },
+  {
+    title: 'Percobaan',
+    icon: DashboardOutlined,
+    to: '/percobaan'
+  },
   { header: 'Authentication' },
   {
     title: 'Login',
