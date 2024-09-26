@@ -27,7 +27,7 @@ const breadcrumbs = shallowRef([
      const translations= shallowRef([
         { id: 'asd', verseId: 1, text: 'asd', version: 'asd', translator: 'asd' },
          ]);
-     var annotations:string;
+     var annotations: string;
      var selectedVersion: string;
      var selectedBook= ref(null);
      var selectedChapter= ref(null);
@@ -112,7 +112,7 @@ function addNewTranslation(id: number){}
                         <v-list-item-subtitle>
                           <v-select
                             v-model="selectedVersion"
-                            :items="translation.version"
+                            :items="translations"
                             label="Select Version"
                           ></v-select>
                           <v-btn small @click="editTranslation(translation.id)">Edit</v-btn>
